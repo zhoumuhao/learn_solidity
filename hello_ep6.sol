@@ -7,6 +7,8 @@ pragma solidity ^0.8.0;
 */
 contract HelloEp6 {
 
+    error onlyLess(string v);
+
     //断言
     function test(uint a) public pure returns (uint) {
         //如果大于6 才返回 结果  否则报错
@@ -28,5 +30,10 @@ contract HelloEp6 {
         return c;
     }
 
+    //抛出错误
+    function test3(uint d) public pure returns (uint) {
+        if(d>10) revert onlyLess(" d less 10");
+        return d;
+    }
 
 }
