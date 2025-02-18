@@ -33,5 +33,16 @@ pragma solidity ^0.8.0;
                                te.orign    tx.orign = user
 **/
 contract GlobalVarsEp8 {
-    
+
+    function test() public view returns (uint,uint,uint,address,uint,uint) {
+        return (block.number /*区块节点*/,block.timestamp /*时间戳*/,block.prevrandao,block.coinbase /*打包人地址*/,block.chainid,block.gaslimit /*gas上限*/);
+    }
+
+    function echo(uint a) public view returns (uint,address,bytes memory,bytes4) {
+        return(a,msg.sender,msg.data /*整个函数的信息*/,msg.sig /*函数参数签名*/);
+    }
+
+    function echoData() public view returns (address,uint) {
+        return (tx.origin,tx.gasprice);
+    }
 }

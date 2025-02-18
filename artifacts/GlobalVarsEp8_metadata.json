@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					}
+				],
+				"name": "echo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "echoData",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "全局变量 eth units 1 wei = 1 1 gwei = 1e9 wei 1 eher  = 1e18 wei time units 1 seconds = 1 1 minutes = 60 seconds 1 hours = 60 minutes 1 day = 24 hours 1 week = 7 days block.number uint block.timestamp uint 15s block.difficulty uint block.coinbase address payable block.chainid uint block.gaslimit uint 20 000 000 msg.data  bytes msg.sender addresss msg.isg bytes4 //test transfer test(uint,uint) msg.value uint //wei tx.gasprice uint tx.origin  address     user=> a.b() => b.c() msg.sender  msg.sender = a.address te.orign    tx.orign = user*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep8.sol": "GlobalVarsEp8"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep8.sol": {
+			"keccak256": "0x21f2930807d399955e2af5b6517c404e83a6ff3fc0f5d1d812ddedde540fe022",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7bd59c3dd03259dfe885007d66287fe0bc0ce22e7c204b5992bec6413d182d2b",
+				"dweb:/ipfs/QmbXgPHNd2ns8Tto4LZ3XWFpAitZwNGuC32W2Px569wu39"
+			]
+		}
+	},
+	"version": 1
+}
