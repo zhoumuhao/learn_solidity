@@ -1,0 +1,196 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student",
+						"name": "item",
+						"type": "tuple"
+					}
+				],
+				"name": "addStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "k",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "editStudentName",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "k",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudentByIndex",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep10.sol": "HelloEp10"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep10.sol": {
+			"keccak256": "0xf0afddb5e969fc1244549e6ed71ade93f6073f1a4faccab4ce2ab49c1277f578",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2b8834d36d16a007e14fc4a8d9cbfde2f97a1a9c7affe589b64e31d85a42542d",
+				"dweb:/ipfs/QmWRjjtSDeJ1R638f5bBzkfNFVVvqLZNhKRs2SSqBMYx8A"
+			]
+		}
+	},
+	"version": 1
+}
