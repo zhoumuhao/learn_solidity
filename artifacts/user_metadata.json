@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getUser",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep14.sol": "user"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep14.sol": {
+			"keccak256": "0xce1ada6f32cac69237a75bc9f4572d314e93daf4e9ebe2fdcb2453f2821e1eda",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ecd5a4843d8ebb387b6b7bc44fc055d17494abbb4d64273f49e14c349ccb0146",
+				"dweb:/ipfs/QmWztAKK4fBC7MxGKic8RFZSH9my7sydQSc2u2s9JdnNqn"
+			]
+		}
+	},
+	"version": 1
+}
