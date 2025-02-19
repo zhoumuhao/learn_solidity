@@ -34,6 +34,11 @@ interface User {
     function test1() external pure returns(string memory) {
         return "not local use";
     }
+    
+    //TODO::测试无效
+    function test2() public returns(string memory){
+        return this.test1();
+    }
 
     
  }
