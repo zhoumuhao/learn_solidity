@@ -36,7 +36,7 @@ interface User {
     }
     
     //TODO::测试无效
-    function test2() public returns(string memory){
+    function test2() public view returns(string memory){
         return this.test1();
     }
 
