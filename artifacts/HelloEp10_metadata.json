@@ -152,6 +152,128 @@
 						"type": "tuple"
 					}
 				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getStudentByName",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStudentList",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "removeStudentByIndex",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "gender",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "creatAd",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct HelloEp10.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -184,11 +306,11 @@
 	},
 	"sources": {
 		"hello_ep10.sol": {
-			"keccak256": "0xf0afddb5e969fc1244549e6ed71ade93f6073f1a4faccab4ce2ab49c1277f578",
+			"keccak256": "0x926caaf1a8ec8ba8f1f70da122d7300090f870205e704195477b2bf1009afea6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2b8834d36d16a007e14fc4a8d9cbfde2f97a1a9c7affe589b64e31d85a42542d",
-				"dweb:/ipfs/QmWRjjtSDeJ1R638f5bBzkfNFVVvqLZNhKRs2SSqBMYx8A"
+				"bzz-raw://c781f1d8726856425680a210b799e4a1dd7be7b57bde3c94837d47fabe099018",
+				"dweb:/ipfs/QmbbjTRTiuSbJgn7zLfKj1pCfX93ZXokydFRMBKJsuBC1T"
 			]
 		}
 	},

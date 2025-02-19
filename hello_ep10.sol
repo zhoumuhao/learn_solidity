@@ -44,5 +44,35 @@ contract HelloEp10 {
         return studentList[k];
     } 
 
-    
+    //根据姓名获取学生信息
+    function getStudentByName(string memory _name) public view returns(bool,Student memory) {
+        Student memory holder;
+        for (uint n; n<studentList.length; n++) 
+        {
+            if(keccak256(abi.encodePacked(studentList[n].name))==keccak256(abi.encodePacked(_name))){
+                return (true,studentList[n]);
+            }
+        }
+        return (false,holder);
+    }
+
+    //获取学生列表
+    function getStudentList() public view returns (Student[] memory) {
+        return studentList;
+    }
+
+    //根据索引删除某个学生
+    function removeStudentByIndex(uint index) public returns (Student[] memory) {
+        Student memory holder;
+
+        for (uint i; i<studentList.length; i++) 
+        {
+            if(i>=index) {
+                studentList[i] = (i+1)>studentList.length ? holder:studentList[i+1];
+            }
+        }
+         studentList.pop();
+         return studentList;
+    }
+
 }
