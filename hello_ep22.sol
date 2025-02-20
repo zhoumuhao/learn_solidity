@@ -13,8 +13,5 @@ contract callBackFun {
     //payable  加入 payable  收取费用
    fallback() external  payable{
         emit Log("fallback",msg.data);
-    }
-
-
-    
+    } 
 }

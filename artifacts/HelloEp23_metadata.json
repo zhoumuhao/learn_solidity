@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "hello",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "自毁函数*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep23.sol": "HelloEp23"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep23.sol": {
+			"keccak256": "0x88b8d2ac20515663c42d52d27283edc560103cc58be06bd4409dacfa91bb83db",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a29f21a99069b9f6789d70cfcb3e5aef255af576f173e94879068a1bb3970fcb",
+				"dweb:/ipfs/QmQiCpEj3gm7KWE5crueSDbazW8zBXsDyqKkDWdGeZtdaM"
+			]
+		}
+	},
+	"version": 1
+}
