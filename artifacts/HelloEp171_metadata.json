@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getParentId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "**可见性 public   公开的 private  私有的  不可继承 external  不能作用于状态，只能作用于方法 internal  私密性较好，可作用于 状态",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep17.sol": "HelloEp171"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep17.sol": {
+			"keccak256": "0xe5a70aef667727165cee2ca12d273f3461a3a9f3d248c3d09269b8457a4899c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cd9c64e108889ea1af58514a052605e692e9a5bb2bf10e940836c22f798fc51",
+				"dweb:/ipfs/QmbxayhSwgT7nyQN7u2Z82dHQL2yCmkC1tpAqfzEUR6DYH"
+			]
+		}
+	},
+	"version": 1
+}
