@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "v",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "mock",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "** 数据位置  storage    存储在合约中  永久保存  memory     存储在内存中    calldata   与 memory 差不多；但是有切片的属性;数组切片走1 开始",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep21.sol": "HelloEp21"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep21.sol": {
+			"keccak256": "0x71c38e878a0910da8776826fb826527b8f65fc1b99be89fb2faa03733afb0579",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b93cabbdc6819309758f30aa8a44dc9356f6624070befa311170256c73c35988",
+				"dweb:/ipfs/QmNjmZBQn8iNrcfFfmxAh74rugUKTEg8LfVdhjzCcT9VmA"
+			]
+		}
+	},
+	"version": 1
+}
