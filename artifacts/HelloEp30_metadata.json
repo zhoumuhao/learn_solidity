@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "fixedArray",
+				"outputs": [
+					{
+						"internalType": "uint256[2][3]",
+						"name": "v",
+						"type": "uint256[2][3]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "normalArray",
+				"outputs": [
+					{
+						"internalType": "uint256[][]",
+						"name": "",
+						"type": "uint256[][]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep30.sol": "HelloEp30"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep30.sol": {
+			"keccak256": "0x55d13661509622c7bdab3e8651b9e4a62e168422b6dcf47287584143f2cfb62b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2a04bde377083624abd171ee0894f271128f6eb678a188ee33099ca9b574b21c",
+				"dweb:/ipfs/Qmet2y5npXv5pphVsZs7SdLiGwDgVa8qyAJkVcDwaEaWVs"
+			]
+		}
+	},
+	"version": 1
+}
