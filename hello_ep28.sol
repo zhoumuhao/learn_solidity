@@ -22,7 +22,7 @@ contract HelloEp29 {
 
     //签名
     function signedHash(bytes32 _hash) public pure returns (bytes32) {
-        return keccak256(abi.encodePacked("\x19Ethreum Signed Message:\n32",_hash));
+        return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32",_hash));
     }
 
     //一种在Solidity 中实现的预编译合约
@@ -39,6 +39,10 @@ contract HelloEp29 {
 
     //验证
     function verify(string memory _msg,bytes calldata _sig,address signer) public pure returns (bool) {
+        //   字符串  hash
+        //   前缀 hash
+        //   签名+ eth hash
+        //   签名 + eth == recoverSigner  必须等于
         return recoverSigner(signedHash(msgHash(_msg)), _sig)==signer;
     }
 
