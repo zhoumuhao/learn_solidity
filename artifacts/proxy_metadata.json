@@ -6,10 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
-			},
-			{
 				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
@@ -32,7 +28,7 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -54,10 +50,6 @@
 				"outputs": [],
 				"stateMutability": "pure",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -73,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"hello_ep26.sol": "User"
+			"hello_ep26.sol": "proxy"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
