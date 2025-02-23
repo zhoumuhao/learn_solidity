@@ -1,0 +1,138 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_msg",
+						"type": "string"
+					}
+				],
+				"name": "msgHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ethHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_sig",
+						"type": "bytes"
+					}
+				],
+				"name": "recoverSigner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "signedHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_msg",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_sig",
+						"type": "bytes"
+					},
+					{
+						"internalType": "address",
+						"name": "signer",
+						"type": "address"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "签名验证    step 1  内容进行 hash 加密   keccak() bytes32    step 2  通过当前账户 对 step1的结果 （含有以太坊前缀字符串）签名    step 3  通过（含有签名的字符串） ETH 哈希 + 签名结果  还原 签名 账户 address    step 4  验证签名  原始内容 + 签名结果 + 账户 address 校验 签名是否为 address 参数**   前端    ethereum.enable()    ethereum.request({\"methed\":\"personal_sign\",param:[hash,accout]}).then(_sig=>{})*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep28.sol": "HelloEp29"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep28.sol": {
+			"keccak256": "0xf5830bdcdf08c15b05aa89d65e32adcfb4746b82c781af896252cfd804778abb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ee741ecebf62dbcbcf756fc252b6e42064de6ca5400f6fdd15138bbea4a00729",
+				"dweb:/ipfs/QmR4Q1J1sTmANAP6ijFwXR2ApiXGDCpb1Gvm4LraUVw3Sy"
+			]
+		}
+	},
+	"version": 1
+}
