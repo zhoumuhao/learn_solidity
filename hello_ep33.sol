@@ -85,7 +85,8 @@ contract TimeLockEp33 {
         emit WithDrawed(tokenAddr,msg.sender,amount,block.timestamp);
     }
 
-
-
-
+    //获取过期时间
+    function getExpireTime() external view returns (uint) {
+        return block.timestamp+120;
+    }
 }
