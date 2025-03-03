@@ -30,7 +30,14 @@ library SignerArray {
 /*
 **  多签钱包
 */
+//   0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+//   0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
+//   0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db
 contract MultiSignEp34 {
+    //构造方法
+    constructor(address[] memory _owner) {
+        owner = _owner;
+    }
 
     //引入类库
     using SignerArray for Signer[];
@@ -48,7 +55,7 @@ contract MultiSignEp34 {
     }
 
     //共管者信息
-    address[] owner;
+    address[] public owner;
 
     Transaction[] transaction;
 
@@ -56,10 +63,16 @@ contract MultiSignEp34 {
 
     mapping (uint=>Signer[]) public transactionSigner;
 
+ 
+
     //事件
     event Commited(uint indexed txId,address indexed creator,string title,uint timeAt);
     event Approved(uint indexed txId,address indexed signer,uint timeAt);
     event Rejected(uint indexed txId,address indexed signer,uint timeAt);
+
+
+   receive() external payable {}
+   fallback() external payable {}
 
     //修改器
     modifier checkBefore(uint _txId) {
@@ -68,9 +81,21 @@ contract MultiSignEp34 {
         require(transactionSigner[txId].find(msg.sender)== -1, "Trx was signed");
         _;
     }
+    //判断所属
+    modifier onlyOwner() {
+        bool ok;
+        for(uint n;n<owner.length;n++) {
+            if(owner[n]==msg.sender) {
+                ok = true;
+                break;
+            }
+        }
+        require(ok, "Permission denied");
+        _;
+    }
     
     //提交交易
-    function commit(string memory title,address to,uint value,bytes calldata data) external {
+    function commit(string memory title,address to,uint value,bytes calldata data) onlyOwner external {
         Transaction memory trx;
         trx.id = ++ txId;
         trx.title = title;
@@ -91,7 +116,7 @@ contract MultiSignEp34 {
     }
 
     //同意
-    function approved(uint _txId) external checkBefore(_txId){
+    function approved(uint _txId) external onlyOwner checkBefore(_txId){
          transactionSigner[txId].push(Signer({
             account:msg.sender,
             state:State.Approved,
@@ -100,8 +125,10 @@ contract MultiSignEp34 {
         //所有人均同意
         if(transactionSigner[_txId].length==owner.length) {
             transaction[_txId-1].state = State.Approved;   
-            transaction[_txId-1].timeAt[0] = block.timestamp;  
-            (bool ok,) = address(transaction[_txId-1].to).call{value:transaction[_txId-1].value}(transaction[_txId-1].data);
+            transaction[_txId-1].timeAt[0] = block.timestamp; 
+
+            Transaction memory trx = transaction[_txId-1];  
+            (bool ok,) = address(trx.to).call{value:trx.value}(trx.data);
             require(ok, "Exceute fail");
         }
         //触发同意事件
@@ -109,7 +136,7 @@ contract MultiSignEp34 {
     }
 
     //拒绝
-    function rejected(uint _txId) external checkBefore(_txId){
+    function rejected(uint _txId) external onlyOwner checkBefore(_txId){
 
          transaction[_txId-1].state = State.Rejected;
          transaction[_txId-1].timeAt[1] = block.timestamp;
@@ -123,5 +150,27 @@ contract MultiSignEp34 {
     }
 
 
+    function getTransactionList(State state,uint pageNum,uint pageSize) external view returns (Transaction[] memory) {
+        //定义一个新数组
+        Transaction[] memory result = new Transaction[](pageSize);
+        //计算偏移量
+        uint offset = pageNum<=1?0:pageNum * pageSize;
+
+        uint i;
+        for(uint n = offset;n<transaction.length;n++) {
+            if(state == transaction[n].state) {
+                // memory 不能直接 push
+                result[i] = transaction[n];
+            }
+            if(++i>pageSize) break ;
+        }
+
+        //过滤掉空值
+        Transaction[] memory resultFilter = new Transaction[](i);
+        for(uint k;k<i;k++) {
+           resultFilter[k] = result[k];
+        }
+        return  resultFilter;
+    }
     
 }
