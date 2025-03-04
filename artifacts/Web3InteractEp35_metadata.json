@@ -1,0 +1,341 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "activityId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timeAt",
+						"type": "uint256"
+					}
+				],
+				"name": "pay",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "activity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minValuePercent",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "finishedTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Web3InteractEp35.State",
+						"name": "state",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "receiveAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "activityId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "activitySender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string[2]",
+						"name": "attr",
+						"type": "string[2]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minValuePercent",
+						"type": "uint256"
+					}
+				],
+				"name": "createActivity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_activityId",
+						"type": "uint256"
+					}
+				],
+				"name": "finish",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_activityId",
+						"type": "uint256"
+					}
+				],
+				"name": "getActivity",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "creator",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "minValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "minValuePercent",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "finishedTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum Web3InteractEp35.State",
+								"name": "state",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "receiveAmount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Web3InteractEp35.Activity",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_activityId",
+						"type": "uint256"
+					}
+				],
+				"name": "payActivity",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hello_ep35.sol": "Web3InteractEp35"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hello_ep35.sol": {
+			"keccak256": "0xddd16119b0d4bc63c4eb517fe4b19402a9a39ce04dbc67174534acbf41eba6f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9c775bff3c32d2282d1a7fb06ed6822e4d1f67c34dc648587441b60f28774f60",
+				"dweb:/ipfs/QmQ3LzgsPSocJERM6mMrFsZ6W46hB2RDRB8MoD11rS8L7t"
+			]
+		}
+	},
+	"version": 1
+}
